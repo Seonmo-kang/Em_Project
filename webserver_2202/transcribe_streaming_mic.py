@@ -113,8 +113,6 @@ cmdLists = [
         #명령어    대답    종료 리턴값
     [u'끝',     '잘가요',       0],
     [u'끝내',     '잘가요',       0],
-    [u'꺼 줘',     '잘가요',       0],
-    [u'온습도', 'DHT',      1],
     [u'내 방 불 켜', 'LEDON',      1],
     [u'내 방 불 꺼', 'LEDOFF',      1],
     [u'거실 불 켜', 'LED2ON',      1],
@@ -140,7 +138,7 @@ def order(name,stt):
     mode_db = Database()
     mode = mode_db.show(name)
     print('mode is ',mode)
-    server_url = "http://192.168.43.104/" 
+    server_url = "http://192.168.43.104/"  # need to change
     url = server_url+stt
     try:
         if (stt == 'mode'):
